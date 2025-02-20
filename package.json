@@ -1,0 +1,55 @@
+{
+  "name": "frankenstein",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.4.1",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vitepress dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "build": "vitepress build"
+  },
+  "dependencies": {
+    "@unocss/reset": "^66.0.0",
+    "@vueuse/core": "^12.7.0",
+    "radix-vue": "^1.9.16",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.3.0",
+    "@iconify-json/nimiq": "https://pkg.pr.new/onmax/nimiq-ui/nimiq-icons@7cacb01",
+    "@iconify/utils": "^2.3.0",
+    "@unocss/eslint-plugin": "^65.5.0",
+    "eslint": "^9.20.1",
+    "eslint-plugin-format": "^1.0.1",
+    "lint-staged": "^15.4.3",
+    "nimiq-css": "^0.3.6",
+    "pathe": "^2.0.3",
+    "simple-git-hooks": "^2.11.1",
+    "unocss": "^66.0.0",
+    "unocss-preset-fluid-sizing": "^0.0.17",
+    "unocss-preset-scale-px": "^0.0.2",
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild",
+      "vue-demi"
+    ],
+    "onlyBuiltDependencies": [
+      "vue-demi"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
